@@ -1,0 +1,18 @@
+The ``04_conditionals`` module
+======================
+
+Using ``answer``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``xxxx`` from the ``xxx`` module:
+
+    >>> from conditionals import answer 
+
+Now use it:
+
+    >>> answer(3)
+    'Weird'
+
+    >>> answer(24)
+    'Not Weird'

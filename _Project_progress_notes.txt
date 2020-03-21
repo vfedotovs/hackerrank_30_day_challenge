@@ -1,0 +1,29 @@
+Backlog Tasks:
+- total amount of work 30 problems to solve
+
+Inprogress:(started but not complted with sucess)
+
+Completed:(with sucess as required)
+- 01 Hello world  koncept stdout - add test - completed
+- 02 data types (int, float, str) - add test - completed
+- 03 operators (concept operators) - add test - completed 
+- 04 conditionals - add test - completed 
+- 05 class_vs_instance 
+
+
+## New knowledge feeding in stdin 
+C:\Users\valentine\Desktop\hakkerrank_code\30_day_paython_challenge>05_class_vs_instance.py < 05_stdin.txt
+Age is not valid, setting age to 0.
+You are young.
+You are young.
+
+You are young.
+You are a teenager.
+
+You are a teenager.
+You are old.
+
+You are old.
+You are old. 
+
+
