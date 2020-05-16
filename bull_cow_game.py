@@ -20,7 +20,7 @@ the game and tell the user at the end.
 
 def gen_random_ints():
     """
-    Function generates 4 random nonreprating digit list in range from 0-9  
+    Function generates 4 random nonrepeating digit list in range from 0-9  
     
     Parameters: none taken
     
@@ -52,7 +52,7 @@ def get_user_guess():
     while input_is_valid is False
         user_guess = input("\nEnter 4 numbers:") 
         # Validation #1 for exact len of 4
-        if len(user_guess) < requred_len or len(user_guess) < requred_len:
+        if len(user_guess) != required_len:
             print("Entered number count is more or less than 4 please try again. "
         # Validation #2 for is numeric
         if user_guess.isnumeric():
@@ -63,6 +63,7 @@ def get_user_guess():
 
 number_to_guess = gen_random_ints()
 
+# TODO: @vfedotovs review code below                  
 def check_win(number_to_guess: list, ug: str):
     A = number_to_guess
     if A[0] == int(ug[0]) and A[1] == int(ug[1]) and \
@@ -89,18 +90,16 @@ def check_bulls(number_to_guess: list, ug: str):
     return bulls
 
 
-count = 0
-
-while count < 20:
-
+attempt_count = 0
+while attempt_count < 20:
     ug = get_user_guess()
     if check_win(number_to_guess, ug) is True:
-        print("You have guessed all 4 numbers in ", count, " attempts !!!")
+        print("You have guessed all 4 numbers in ", attempt_count, " attempts !!!")
         break
     else:
         cow_count = check_cows(number_to_guess, ug)
         bull_count = check_bulls(number_to_guess, ug)
         print("You have ", cow_count, " cows, ", bull_count, " bulls ")
+    attempt_count += 1
 
-    count += 1
-# print("Yuu have reached guess count limit ... ")
+ print("You have lost game guess count is more than 20 ... ")
