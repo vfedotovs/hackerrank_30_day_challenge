@@ -19,12 +19,19 @@ the game and tell the user at the end.
 
 
 def gen_random_ints():
-    alist = []
-    while len(alist) < 4:
-        x = random.randrange(0, 9)
-        if x not in alist:
-            alist.append(x)
-    return alist
+    """
+    Function generates 4 random nonreprating digit list in range from 0-9  
+    
+    Parameters: none taken
+    
+    Return: list with 4 ints
+    """
+    number_list = []
+    while len(number_list) < 4:
+        number = random.randrange(0, 9)
+        if number not in number_list:
+            number_list.append(number)
+    return number_list
 
 
 number_to_guess = gen_random_ints()
