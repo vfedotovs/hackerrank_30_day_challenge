@@ -34,18 +34,34 @@ def gen_random_ints():
     return number_list
 
 
-number_to_guess = gen_random_ints()
-# print(number_to_guess)
-
-
 def get_user_guess():
-    #print("\nEnter 4 numbers:")
-    user_guess = input("\nEnter 4 numbers:")  # collect string so we caniterate over it
+    """
+    Function collects 4 digit string from stdin
+    
+    Parameters: none taken
+    
+    Return: 4 digit string
+    
+    Rise exception: 
+         # Validation #1 for exact len of 4 : will catch if not equal 4 len
+         # Validation #2 for is numeric : will catch if entered value is not number    
+    """
+    possible_choises = [1,2,3,4,5,6,7,8,9,0]
+    required_len = 4
+    input_is_valid = False
+    while input_is_valid is False
+        user_guess = input("\nEnter 4 numbers:") 
+        # Validation #1 for exact len of 4
+        if len(user_guess) < requred_len or len(user_guess) < requred_len:
+            print("Entered number count is more or less than 4 please try again. "
+        # Validation #2 for is numeric
+        if user_guess.isnumeric():
+            input_is_valid = True
+         else:
+            print("Entered value does not contain 4 numbers please try again. "
     return user_guess
 
-    # TODO: error checking needed for invalid input not str and len count not 4
-    # test what happens if user enters 8888 if bull cow is displayed correctly
-
+number_to_guess = gen_random_ints()
 
 def check_win(number_to_guess: list, ug: str):
     A = number_to_guess
